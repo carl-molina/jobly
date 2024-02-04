@@ -8,7 +8,7 @@ import "./CompanyCard.css";
  *
  *  State: none
  *
- *  CompanyList -> CompanyCard 
+ *  CompanyList -> CompanyCard
  */
 
 function CompanyCard({ company }) {
@@ -20,9 +20,9 @@ function CompanyCard({ company }) {
       <Link to={`/companies/${handle}`} >
         <div className="CompanyCard-header">
           <h3 className="CompanyCard-name">{name}</h3>
-          {logoUrl && 
-          <img className="CompanyCard-logo" 
-               src={`../${logoUrl}`}
+          {logoUrl &&
+          <img className="CompanyCard-logo"
+               src={`logos/${logoUrl}`}
                alt={`${name} logo`}/>
           }
         </div>
