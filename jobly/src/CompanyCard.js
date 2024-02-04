@@ -22,7 +22,7 @@ function CompanyCard({ company }) {
           <h3 className="CompanyCard-name">{name}</h3>
           {logoUrl &&
           <img className="CompanyCard-logo"
-               src={`logos/${logoUrl}`}
+               src={`${logoUrl}`}
                alt={`${name} logo`}/>
           }
         </div>
