@@ -94,10 +94,9 @@ function App() {
   /** updateUserProfile:
    *
    */
-
-  // async function updateUserProfile() {
-  // TODO: implement!
-  // }
+  async function updateUserProfile() {
+    //TODO: implement!
+  }
 
 
   return (
