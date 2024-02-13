@@ -28,7 +28,7 @@ function LoginForm({ login }) {
   const { username, password } = formData;
 
   /** Updates form values with user input */
-  
+
   function handleChange(evt) {
     const field = evt.target;
     setFormData(fData => ({
@@ -36,15 +36,15 @@ function LoginForm({ login }) {
       [field.name]: field.value
     }));
   }
-  
+
   const navigate = useNavigate();
-  
+
   /** Calls parent function.
    *
    *  On success, redirects to homepage.
    *  On failure, updates the state with the error messages.
    */
-  
+
   async function handleSubmit(evt) {
     evt.preventDefault();
     try {
@@ -86,7 +86,7 @@ function LoginForm({ login }) {
         <button className="LoginForm-login-btn">SUBMIT</button> {/* test click */}
       </form>
 
-      {errs.map((err, i) => <Alert key={i} message={err} />)}
+      {/* {errs.map((err, i) => <Alert key={i} message={err} />)} */}
 
     </div>
 
