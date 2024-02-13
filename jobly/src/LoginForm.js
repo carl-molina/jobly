@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./LoginForm.css";
 import { useNavigate } from "react-router-dom";
 
-import Alert from "./Alert";
+// import Alert from "./Alert";
 
 const DEFAULT_FORM_DATA = {
   username: "",
@@ -23,7 +23,7 @@ const DEFAULT_FORM_DATA = {
 
 function LoginForm({ login }) {
   const [formData, setFormData] = useState(DEFAULT_FORM_DATA);
-  const [errs, setErrs] = useState([]);
+  // const [errs, setErrs] = useState([]);
 
   const { username, password } = formData;
 
