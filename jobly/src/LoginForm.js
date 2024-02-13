@@ -51,7 +51,7 @@ function LoginForm({ login }) {
       await login(formData);
       navigate("/");
     } catch (err) {
-      setErrs(err);
+      // setErrs(err);
     }
   }
 
