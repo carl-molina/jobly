@@ -91,12 +91,13 @@ function App() {
     setUserData(DEFAULT_USER_DATA);
   }
 
-  /** updateUserProfile: 
-   * 
-  */
-  async function updateUserProfile() {
-    //TODO: implement!
-  }
+  /** updateUserProfile:
+   *
+   */
+
+  // async function updateUserProfile() {
+  // TODO: implement!
+  // }
 
 
   return (

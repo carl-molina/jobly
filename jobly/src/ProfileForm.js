@@ -15,7 +15,9 @@ import Alert from "./Alert";
  *  RoutesList -> SignUpForm -> Alert
  */
 
-function ProfileForm({ updateUserProfile }) {
+// TODO: original fn header:
+// function ProfileForm({ updateUserProfile }) {
+function ProfileForm() {
   const [errs, setErrs] = useState([]);
   const { user } = useContext(userContext);
 
@@ -43,7 +45,7 @@ function ProfileForm({ updateUserProfile }) {
   async function handleSubmit(evt) {
     evt.preventDefault();
     try {
-      await updateUserProfile(formData);
+      // await updateUserProfile(formData);
     } catch (err) {
       console.log(err);
       setErrs(err);
