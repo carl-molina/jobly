@@ -30,7 +30,7 @@ function Navbar({ logout }) {
               <li><NavLink to="/companies">Companies</NavLink></li>
               <li><NavLink to="/jobs">Jobs</NavLink></li>
               <li><NavLink to="/profile">{username}'s Profile</NavLink></li>
-              <li><button onClick={logout}>LOGOUT</button></li>
+              <li><a onClick={logout}>LOGOUT</a></li>
             </>
           }
 
