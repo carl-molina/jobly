@@ -20,13 +20,19 @@ const DEFAULT_USER_DATA = {
  *
  * Props: none
  *
- * State: userData
+ * State:
+ *  - userData: current logged in user, if any. Defaults to landing page with
+ *  unauthorized if no logged in user.
+ *  - applicationIds: set of application IDs for applied jobs.
  *
  * App -> { Navbar, RoutesList }
  */
 function App() {
   const [userData, setUserData] = useState({ DEFAULT_USER_DATA });
+  const [applicationIds, setApplicationIds] = useState(new Set([]));
+
   console.log("App userData state: ", userData);
+  console.log("App applicationIds: ", applicationIds);
 
   useEffect(function getLoginFromLocalStorageOnMount() {
     console.log("App useEffect for local storage");
@@ -39,6 +45,9 @@ function App() {
      try {
       const user = await JoblyApi.getUser(username);
       setUserData(user);
+      console.log("This is user: ", user);
+      console.log("This is user.applications: ", user.applications);
+      setApplicationIds(new Set(user.applications));
      } catch (err) {
       console.log(err);
      }
@@ -82,6 +91,8 @@ function App() {
       lastName: userData.lastName,
       email: userData.email,
     });
+
+    setApplicationIds(new Set(userData.applications));
   }
 
   /** logout: Resets userData to default. */
@@ -110,11 +121,29 @@ function App() {
     }));
   }
 
+  /** hasAppliedToJob: checks if job has been applied to. */
+  function hasAppliedToJob(jobId) {
+    return applicationIds.has(jobId);
+  }
+
+  /** applyToJob: updates user's set of applied jobs. */
+  function applyToJob(jobId) {
+    const username = userData.username;
+    if (hasAppliedToJob(jobId)) return;
+    JoblyApi.applyToJob(username, jobId);
+    setApplicationIds(new Set([...applicationIds, jobId]));
+  }
 
   return (
     <div className="App">
       <BrowserRouter>
-        <userContext.Provider value={{ user: userData }}>
+        <userContext.Provider
+          value={{
+            user: userData,
+            hasAppliedToJob: hasAppliedToJob,
+            applyToJob: applyToJob,
+            }}
+          >
           <Navbar logout={logout} />
           <RoutesList
             signUp={signUp}
