@@ -91,11 +91,23 @@ function App() {
     setUserData(DEFAULT_USER_DATA);
   }
 
-  /** updateUserProfile:
-   *
-   */
-  async function updateUserProfile() {
-    //TODO: implement!
+  /** updateUserProfile: updates user's profile from ProfileForm component. */
+  async function updateUserProfile({ username, firstName, lastName, email }) {
+    const updatedUserData = await JoblyApi.updateUser(
+      username,
+      {
+        firstName,
+        lastName,
+        email
+      }
+    )
+
+    setUserData(prevUserData => ({
+      ...prevUserData,
+      firstName: firstName,
+      lastName: lastName,
+      email: email
+    }));
   }
 
 
@@ -107,6 +119,7 @@ function App() {
           <RoutesList
             signUp={signUp}
             login={login}
+            updateProfile={updateUserProfile}
           />
         </userContext.Provider>
       </BrowserRouter>
