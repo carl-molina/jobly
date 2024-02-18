@@ -16,14 +16,14 @@ function Homepage() {
 
   const { user } = useContext(userContext);
 
-  const { username } = user;
+  const { firstName } = user;
 
 
   return (
     <div className="Homepage">
       <h1>Jobly</h1>
       <h2>All the jobs in one convenient place.</h2>
-      {username && <h3>Welcome, {username}! GET THOSE JOBS!!</h3>}
+      {firstName && <h3>Welcome, {firstName}! GET THOSE JOBS!!</h3>}
       <p>Background Image from Vecteezy.</p>
     </div>
   );
