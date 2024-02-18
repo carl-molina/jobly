@@ -1,8 +1,11 @@
-# Getting Started with Create React App
+# Jobly
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Jobly is a job board site where users can sign up, browse companies, and apply to jobs, saving their history of which jobs they've applied to.
+Companies can also post new jobs. This project was originally built in Jan-Feb 2024 at [Rithm School](https://www.rithmschool.com/).
 
-## Available Scripts
+## Component Hierarchy Design
+
+![Components Design](/jobly/public/README.drawio.png)
 
 In the project directory, you can run:
 
