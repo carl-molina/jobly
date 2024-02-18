@@ -109,9 +109,7 @@ class JoblyApi {
     return res.user;
   }
 
-  /** Updates user. Returns newly updated user data:
-   *
-   */
+  /** Updates user. Returns newly updated user data. */
   static async updateUser(username, userDataToUpdate) {
     const res = await this.request(
       `users/${username}`,
@@ -120,6 +118,12 @@ class JoblyApi {
 
     return res.user;
   }
+
+  /** Applies to a job. */
+  static async applyToJob(username, jobId) {
+    await this.request(`users/${username}/jobs/${jobId}`, {}, "POST");
+  }
+
 
 }
 
