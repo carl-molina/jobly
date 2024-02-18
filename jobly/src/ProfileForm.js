@@ -1,5 +1,6 @@
 import userContext from "./userContext";
 import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ProfileForm.css";
 import Alert from "./Alert";
 
@@ -15,9 +16,7 @@ import Alert from "./Alert";
  *  RoutesList -> SignUpForm -> Alert
  */
 
-// TODO: original fn header:
-// function ProfileForm({ updateUserProfile }) {
-function ProfileForm() {
+function ProfileForm({ updateProfile }) {
   const [errs, setErrs] = useState([]);
   const { user } = useContext(userContext);
 
@@ -41,11 +40,14 @@ function ProfileForm() {
     }));
   }
 
+  const navigate = useNavigate();
+
   /** Calls parent function */
   async function handleSubmit(evt) {
     evt.preventDefault();
     try {
-      // await updateUserProfile(formData);
+      await updateProfile(formData);
+      navigate("/");
     } catch (err) {
       console.log(err);
       setErrs(err);
