@@ -10,3 +10,13 @@ Companies can also post new jobs. This project was originally built in Jan-Feb 2
 ## Demo
 
 ![Jobly Gif](/jobly/public/joblyGif.gif)
+
+## Built With
+
+* ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat)
+* [![Vue][Vue.js]][Vue-url]
+* [![Angular][Angular.io]][Angular-url]
+* [![Svelte][Svelte.dev]][Svelte-url]
+* [![Laravel][Laravel.com]][Laravel-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![JQuery][JQuery.com]][JQuery-url]
