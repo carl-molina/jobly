@@ -22,3 +22,11 @@ Companies can also post new jobs. This project was originally built in Jan-Feb 2
 * ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white&style=flat)
 * ![ElephantSQL](https://img.shields.io/badge/-ElephantSQL-336791?logo=elephantsql&logoColor=white&style=flat)
 * ![Render](https://img.shields.io/badge/-Render-333333?logo=render&logoColor=white&style=flat)
+
+
+## Acknowledgements
+* [Rithm School](https://github.com/rithmschool)
+* [Brandie Lucano](https://github.com/BMLucano) for backend contributions
+* [Veronica Ni](https://github.com/veronicani) for frontend contributions
+* [Juliane Cassidy](https://github.com/julianecassidy) for README inspo
+* [Img Shields](https://shields.io/)
