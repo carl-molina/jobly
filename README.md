@@ -14,7 +14,8 @@ Companies can also post new jobs. This project was originally built in Jan-Feb 2
 ## Built With
 
 * ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat)
-* [![Vue][Vue.js]][Vue-url]
+* ![React Router](https://img.shields.io/badge/-React%20Router-CA4245?logo=react-router&logoColor=white&style=flat)
+
 * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
